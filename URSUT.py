@@ -1,11 +1,11 @@
 import requests
 import pyshorteners
 import sys
-from colorama import *
+
 
 class name_ban:
     
-    def banner(self):
+    def banner(self)
          pass
     
     def help(self):
