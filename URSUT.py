@@ -9,10 +9,10 @@ class name_ban:
          pass
     
     def help(self):
-       jo=0
+       
        
     
-       print('USLIT V1.0')
+       print('URSIT V1.0')
        about = '''Have you ever wondered: Where does this link go? 
        The uslit it allows you to see the complete path a redirected URL goes through. 
        It will show you the full redirection path of URLs, shortened links, or tiny URLs.
@@ -39,7 +39,7 @@ class name_ban:
         print("-shortner or - s -> To give shorten form of a link")
         print('--help or -h  -> To display helpline how to use this tool & about tool. ')
 
-class uslit:
+class ursut:
     def __init__(self, url):
         self.url = url
 
@@ -56,17 +56,17 @@ class uslit:
     def track_url(self):
         try:
             resp = requests.get(self.url)
-            if resp.history:
-                print(Fore.RED + '\nYes URL is Redirected or Shorten!')
-                print(Fore.RED + 'Here the following redirected chain...\n')
+            if resp.history: 
+                print(Fore.RED + ' \nYes URL is Redirected or Shorten!' )
+                print(Fore.RED + ' Here the following redirected chain...\n ' )
                 for r in resp.history:
-                    print(Fore.RED + '|', r.status_code, '|', r.url, '|', r.reason)
+                    print(Fore.RED + ' | ', r.status_code, '|', r.url, '|', r.reason)
                 print(Fore.WHITE + '\nEND URL :', resp.url)
-                print(Fore.WHITE + 'Status Code :', resp.status_code, resp.reason)
+                print(Fore.WHITE +  'Status Code :', resp.status_code, resp.reason)
             else:
-                print(Fore.WHITE + '\nURL is Not Redirected or Shorten!')
-                print(Fore.WHITE + 'END URL :', resp.url)
-                print(Fore.WHITE + 'Status Code :',resp.status_code, resp.reason)
+                print(Fore.WHITE + ' \nURL is Not Redirected or Shorten!')
+                print(Fore.WHITE + ' END URL :', resp.url)
+                print(Fore.WHITE + ' Status Code :' , resp.status_code, resp.reason)
 
         except BaseException as be:
             print(Fore.RED + 'Tracking Failed! Check URL')
@@ -83,11 +83,11 @@ if __name__=='__main__':
         elif sys.argv[1] == '--track' or sys.argv[1] == '-t':
             url = input('Enter URL to Track:')
             print('Tracking Redirection Of URL...')
-            track = uslit(url)
+            track = ursut(url)
             track.track_url()
         elif sys.argv[1]== "--shortner" or sys.argv[1]=="-s":
             url = input('Enter URL to short:')
-            short = uslit(url)
+            short = ursut(url)
             short.shortner()
         else:
             intro.cmdusage()
