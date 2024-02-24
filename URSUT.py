@@ -2,16 +2,11 @@ import requests
 import pyshorteners
 import sys
 from colorama import * 
-
 class name_ban:
-    
     def banner(self):
          pass
     
     def help(self):
-       
-       
-    
        print('URSIT V1.0')
        about = '''Have you ever wondered: Where does this link go? 
        The uslit it allows you to see the complete path a redirected URL goes through. 
