@@ -1,7 +1,7 @@
 import requests
 import pyshorteners
 import sys
-from colorama import *
+import colorama 
 
 class name_ban:
     
