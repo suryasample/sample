@@ -2,9 +2,7 @@ import requests
 import pyshorteners
 import sys
 import colorama 
-
 class name_ban:
-    
     def banner(self):
          pass
     
